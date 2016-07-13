@@ -1,6 +1,0 @@
-framework module Pods_ExpressMaster {
-  umbrella header "Pods-ExpressMaster-umbrella.h"
-
-  export *
-  module * { export * }
-}
