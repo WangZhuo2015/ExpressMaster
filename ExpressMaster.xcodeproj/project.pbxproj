@@ -12,9 +12,11 @@
 		356E3CAA1D362BF600F8752A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E3CA81D362BF600F8752A /* Main.storyboard */; };
 		356E3CAC1D362BF600F8752A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356E3CAB1D362BF600F8752A /* Assets.xcassets */; };
 		356E3CAF1D362BF600F8752A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E3CAD1D362BF600F8752A /* LaunchScreen.storyboard */; };
+		EB6AF8A9A6F8E1FAD956C6B1 /* Pods_ExpressMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5CEA32EF2FF08C30AEFD94 /* Pods_ExpressMaster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35026EF68563FC94978D0015 /* Pods-ExpressMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressMaster/Pods-ExpressMaster.release.xcconfig"; sourceTree = "<group>"; };
 		356E3CA11D362BF600F8752A /* ExpressMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpressMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		356E3CA41D362BF600F8752A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		356E3CA61D362BF600F8752A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		356E3CAB1D362BF600F8752A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		356E3CAE1D362BF600F8752A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		356E3CB01D362BF600F8752A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F1F812A5A69A5B6D8EF440C /* Pods-ExpressMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressMaster/Pods-ExpressMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		BA5CEA32EF2FF08C30AEFD94 /* Pods_ExpressMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpressMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6AF8A9A6F8E1FAD956C6B1 /* Pods_ExpressMaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				356E3CA31D362BF600F8752A /* ExpressMaster */,
 				356E3CA21D362BF600F8752A /* Products */,
+				9C4F5B668A89F4C50731E55C /* Pods */,
+				C4759F06895062834E51AF9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = ExpressMaster;
 			sourceTree = "<group>";
 		};
+		9C4F5B668A89F4C50731E55C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F812A5A69A5B6D8EF440C /* Pods-ExpressMaster.debug.xcconfig */,
+				35026EF68563FC94978D0015 /* Pods-ExpressMaster.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4759F06895062834E51AF9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA5CEA32EF2FF08C30AEFD94 /* Pods_ExpressMaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 356E3CB31D362BF600F8752A /* Build configuration list for PBXNativeTarget "ExpressMaster" */;
 			buildPhases = (
+				8366804BF1C40AE0C6D3AD73 /* 📦 Check Pods Manifest.lock */,
 				356E3C9D1D362BF600F8752A /* Sources */,
 				356E3C9E1D362BF600F8752A /* Frameworks */,
 				356E3C9F1D362BF600F8752A /* Resources */,
+				35AEB04CEE89BBB58202B4FE /* 📦 Embed Pods Frameworks */,
+				F5B6BBE543E8A025D227B533 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35AEB04CEE89BBB58202B4FE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExpressMaster/Pods-ExpressMaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8366804BF1C40AE0C6D3AD73 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F5B6BBE543E8A025D227B533 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExpressMaster/Pods-ExpressMaster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		356E3C9D1D362BF600F8752A /* Sources */ = {
@@ -247,6 +322,7 @@
 		};
 		356E3CB41D362BF600F8752A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F1F812A5A69A5B6D8EF440C /* Pods-ExpressMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExpressMaster/Info.plist;
@@ -258,6 +334,7 @@
 		};
 		356E3CB51D362BF600F8752A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35026EF68563FC94978D0015 /* Pods-ExpressMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExpressMaster/Info.plist;
@@ -286,6 +363,7 @@
 				356E3CB51D362BF600F8752A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
