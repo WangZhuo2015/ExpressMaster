@@ -12,6 +12,12 @@
 		356E3CAA1D362BF600F8752A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E3CA81D362BF600F8752A /* Main.storyboard */; };
 		356E3CAC1D362BF600F8752A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356E3CAB1D362BF600F8752A /* Assets.xcassets */; };
 		356E3CAF1D362BF600F8752A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E3CAD1D362BF600F8752A /* LaunchScreen.storyboard */; };
+		35FE5D8B1D76F09D0069A17E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5D8A1D76F09D0069A17E /* MainTabBarViewController.swift */; };
+		35FE5D931D76F0ED0069A17E /* Index.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FE5D921D76F0ED0069A17E /* Index.storyboard */; };
+		35FE5D961D76F1170069A17E /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FE5D951D76F1170069A17E /* Mine.storyboard */; };
+		35FE5D9A1D76F1370069A17E /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5D991D76F1370069A17E /* IndexViewController.swift */; };
+		35FE5D9C1D76F15B0069A17E /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5D9B1D76F15B0069A17E /* MineViewController.swift */; };
+		35FE5DA01D76F25C0069A17E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FE5D9F1D76F25C0069A17E /* R.generated.swift */; };
 		EB6AF8A9A6F8E1FAD956C6B1 /* Pods_ExpressMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5CEA32EF2FF08C30AEFD94 /* Pods_ExpressMaster.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +30,12 @@
 		356E3CAB1D362BF600F8752A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		356E3CAE1D362BF600F8752A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		356E3CB01D362BF600F8752A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35FE5D8A1D76F09D0069A17E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Tabbar/MainTabBarViewController.swift; sourceTree = "<group>"; };
+		35FE5D921D76F0ED0069A17E /* Index.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Index.storyboard; path = Index/Index.storyboard; sourceTree = "<group>"; };
+		35FE5D951D76F1170069A17E /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Mine.storyboard; path = Mine/Mine.storyboard; sourceTree = "<group>"; };
+		35FE5D991D76F1370069A17E /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexViewController.swift; path = Index/IndexViewController.swift; sourceTree = "<group>"; };
+		35FE5D9B1D76F15B0069A17E /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineViewController.swift; path = Mine/MineViewController.swift; sourceTree = "<group>"; };
+		35FE5D9F1D76F25C0069A17E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		9F1F812A5A69A5B6D8EF440C /* Pods-ExpressMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressMaster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressMaster/Pods-ExpressMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		BA5CEA32EF2FF08C30AEFD94 /* Pods_ExpressMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpressMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,14 +73,92 @@
 		356E3CA31D362BF600F8752A /* ExpressMaster */ = {
 			isa = PBXGroup;
 			children = (
+				35FE5D8E1D76F0B60069A17E /* Utility */,
+				35FE5D8D1D76F0B30069A17E /* App */,
 				356E3CA41D362BF600F8752A /* AppDelegate.swift */,
 				356E3CA61D362BF600F8752A /* ViewController.swift */,
-				356E3CA81D362BF600F8752A /* Main.storyboard */,
 				356E3CAB1D362BF600F8752A /* Assets.xcassets */,
 				356E3CAD1D362BF600F8752A /* LaunchScreen.storyboard */,
 				356E3CB01D362BF600F8752A /* Info.plist */,
 			);
 			path = ExpressMaster;
+			sourceTree = "<group>";
+		};
+		35FE5D8C1D76F0AD0069A17E /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				35FE5D8A1D76F09D0069A17E /* MainTabBarViewController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		35FE5D8D1D76F0B30069A17E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				356E3CA81D362BF600F8752A /* Main.storyboard */,
+				35FE5D901D76F0CD0069A17E /* Index */,
+				35FE5D8F1D76F0C90069A17E /* Mine */,
+				35FE5D8C1D76F0AD0069A17E /* TabBar */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		35FE5D8E1D76F0B60069A17E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				35FE5D9F1D76F25C0069A17E /* R.generated.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		35FE5D8F1D76F0C90069A17E /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				35FE5D971D76F11A0069A17E /* Controller */,
+				35FE5D941D76F10A0069A17E /* View */,
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		35FE5D901D76F0CD0069A17E /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				35FE5D981D76F1240069A17E /* Controller */,
+				35FE5D911D76F0D90069A17E /* View */,
+			);
+			name = Index;
+			sourceTree = "<group>";
+		};
+		35FE5D911D76F0D90069A17E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35FE5D921D76F0ED0069A17E /* Index.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		35FE5D941D76F10A0069A17E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35FE5D951D76F1170069A17E /* Mine.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		35FE5D971D76F11A0069A17E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35FE5D9B1D76F15B0069A17E /* MineViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		35FE5D981D76F1240069A17E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35FE5D991D76F1370069A17E /* IndexViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		9C4F5B668A89F4C50731E55C /* Pods */ = {
@@ -96,6 +186,7 @@
 			buildConfigurationList = 356E3CB31D362BF600F8752A /* Build configuration list for PBXNativeTarget "ExpressMaster" */;
 			buildPhases = (
 				8366804BF1C40AE0C6D3AD73 /* 📦 Check Pods Manifest.lock */,
+				35FE5D9E1D76F1B90069A17E /* R.swift */,
 				356E3C9D1D362BF600F8752A /* Sources */,
 				356E3C9E1D362BF600F8752A /* Frameworks */,
 				356E3C9F1D362BF600F8752A /* Resources */,
@@ -151,7 +242,9 @@
 			files = (
 				356E3CAF1D362BF600F8752A /* LaunchScreen.storyboard in Resources */,
 				356E3CAC1D362BF600F8752A /* Assets.xcassets in Resources */,
+				35FE5D961D76F1170069A17E /* Mine.storyboard in Resources */,
 				356E3CAA1D362BF600F8752A /* Main.storyboard in Resources */,
+				35FE5D931D76F0ED0069A17E /* Index.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +265,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExpressMaster/Pods-ExpressMaster-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		35FE5D9E1D76F1B90069A17E /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
 		};
 		8366804BF1C40AE0C6D3AD73 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -210,8 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35FE5D8B1D76F09D0069A17E /* MainTabBarViewController.swift in Sources */,
 				356E3CA71D362BF600F8752A /* ViewController.swift in Sources */,
 				356E3CA51D362BF600F8752A /* AppDelegate.swift in Sources */,
+				35FE5D9A1D76F1370069A17E /* IndexViewController.swift in Sources */,
+				35FE5D9C1D76F15B0069A17E /* MineViewController.swift in Sources */,
+				35FE5DA01D76F25C0069A17E /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

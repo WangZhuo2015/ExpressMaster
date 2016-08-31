@@ -1,3 +1,39 @@
-PODFILE CHECKSUM: 52157ff46baabd9aaf032d0336d33fef8a1b5767
+PODS:
+  - Alamofire (3.4.1)
+  - AsyncSwift (1.7.2)
+  - IQKeyboardManagerSwift (4.0.4)
+  - Kingfisher (2.4.2)
+  - MJRefresh (3.1.10)
+  - PKHUD (3.2.1)
+  - R.swift (2.4.0):
+    - R.swift.Library (~> 2.2.0)
+  - R.swift.Library (2.2.0)
+  - SnapKit (0.21.1)
+  - TextFieldEffects (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AsyncSwift
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - MJRefresh
+  - PKHUD
+  - R.swift
+  - SnapKit
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
+  IQKeyboardManagerSwift: e0964d04d6a29b71016fd346dca13ecb80a2823a
+  Kingfisher: 05bf8d04408aaa70fcd2c8c81b9f1d0f1ad313dd
+  MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
+  PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
+  R.swift: 0ef9c42dc6c94ac44a3c78a7639c73f855a8e159
+  R.swift.Library: 31a487b65381f37a7d203a6f1f935b43c9be35b0
+  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
+
+PODFILE CHECKSUM: ea320ed795d6c92bff03583396bc1cffff38a0b8
 
 COCOAPODS: 1.0.0
