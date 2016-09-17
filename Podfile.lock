@@ -1,14 +1,14 @@
 PODS:
-  - Alamofire (3.4.1)
-  - AsyncSwift (1.7.2)
-  - IQKeyboardManagerSwift (4.0.4)
-  - Kingfisher (2.4.2)
-  - MJRefresh (3.1.10)
+  - Alamofire (4.0.0)
+  - AsyncSwift (1.7.3)
+  - IQKeyboardManagerSwift (4.0.6)
+  - Kingfisher (3.0.1)
+  - MJRefresh (3.1.12)
   - PKHUD (3.2.1)
-  - R.swift (2.4.0):
-    - R.swift.Library (~> 2.2.0)
-  - R.swift.Library (2.2.0)
-  - SnapKit (0.21.1)
+  - R.swift (3.0.0):
+    - R.swift.Library (~> 3.0.0)
+  - R.swift.Library (3.0.0)
+  - SnapKit (3.0.0)
   - TextFieldEffects (1.2.0)
 
 DEPENDENCIES:
@@ -23,15 +23,15 @@ DEPENDENCIES:
   - TextFieldEffects
 
 SPEC CHECKSUMS:
-  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
-  AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
-  IQKeyboardManagerSwift: e0964d04d6a29b71016fd346dca13ecb80a2823a
-  Kingfisher: 05bf8d04408aaa70fcd2c8c81b9f1d0f1ad313dd
-  MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  AsyncSwift: f3ad5dd077bbd1477e7573e87071a532fedaca1a
+  IQKeyboardManagerSwift: b3015e819559ca76381f87a0833f44d178564603
+  Kingfisher: d5a491b45ea453d90a31bd2c0831d5243e73a73f
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
-  R.swift: 0ef9c42dc6c94ac44a3c78a7639c73f855a8e159
-  R.swift.Library: 31a487b65381f37a7d203a6f1f935b43c9be35b0
-  SnapKit: bbad04cb016c7cead63965f16b00c09318d271ee
+  R.swift: 5a8b4a4ea565b0f20c39d8ce1445f3d3a9064768
+  R.swift.Library: fed723da260519abed60044de7aaf19494cc4e1f
+  SnapKit: 98af0a4e9369d3c58f758967518081dbdc7eb1d9
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
 
 PODFILE CHECKSUM: ea320ed795d6c92bff03583396bc1cffff38a0b8
