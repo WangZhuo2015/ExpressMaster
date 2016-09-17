@@ -6,10 +6,9 @@ target 'ExpressMaster' do
   use_frameworks!
   
   pod 'SnapKit'                     # 约束布局DSL
-  #pod 'Alamofire'                   # AFNetworking Swift
+  pod 'Alamofire'                   # AFNetworking Swift
   #pod 'Kingfisher'                  # Kingfisher图片缓存库
   pod 'R.swift'                     # R.Swift资源文件统一管理
-  #pod 'AsyncSwift'                  # GCD封装
   #pod 'IQKeyboardManagerSwift'      # 视图自动上移
   #pod 'TextFieldEffects'            # TextField特效
   #pod 'MJRefresh'                   # 上拉\下拉刷新

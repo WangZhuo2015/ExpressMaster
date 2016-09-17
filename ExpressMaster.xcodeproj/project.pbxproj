@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356E15151D8CEDAC00CDB696 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E15141D8CEDAC00CDB696 /* HttpClient.swift */; };
+		356E15171D8CF23100CDB696 /* ServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E15161D8CF23100CDB696 /* ServiceProxy.swift */; };
+		356E151A1D8CF45E00CDB696 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E15191D8CF45E00CDB696 /* User.swift */; };
+		356E151D1D8CF75400CDB696 /* UserAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E151C1D8CF75400CDB696 /* UserAPIBase.swift */; };
 		356E3CA51D362BF600F8752A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E3CA41D362BF600F8752A /* AppDelegate.swift */; };
 		356E3CA71D362BF600F8752A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E3CA61D362BF600F8752A /* ViewController.swift */; };
 		356E3CAA1D362BF600F8752A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E3CA81D362BF600F8752A /* Main.storyboard */; };
@@ -23,6 +27,10 @@
 
 /* Begin PBXFileReference section */
 		35026EF68563FC94978D0015 /* Pods-ExpressMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressMaster/Pods-ExpressMaster.release.xcconfig"; sourceTree = "<group>"; };
+		356E15141D8CEDAC00CDB696 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpClient.swift; path = Network/HttpClient.swift; sourceTree = "<group>"; };
+		356E15161D8CF23100CDB696 /* ServiceProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceProxy.swift; path = Network/ServiceProxy.swift; sourceTree = "<group>"; };
+		356E15191D8CF45E00CDB696 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		356E151C1D8CF75400CDB696 /* UserAPIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAPIBase.swift; path = Model/UserAPIBase.swift; sourceTree = "<group>"; };
 		356E3CA11D362BF600F8752A /* ExpressMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpressMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		356E3CA41D362BF600F8752A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		356E3CA61D362BF600F8752A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +60,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		356E15131D8CED4B00CDB696 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				356E15141D8CEDAC00CDB696 /* HttpClient.swift */,
+				356E15161D8CF23100CDB696 /* ServiceProxy.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		356E15181D8CF42100CDB696 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				356E151B1D8CF74200CDB696 /* APIBase */,
+				356E15191D8CF45E00CDB696 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		356E151B1D8CF74200CDB696 /* APIBase */ = {
+			isa = PBXGroup;
+			children = (
+				356E151C1D8CF75400CDB696 /* UserAPIBase.swift */,
+			);
+			name = APIBase;
+			sourceTree = "<group>";
+		};
 		356E3C981D362BF600F8752A = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +129,8 @@
 		35FE5D8D1D76F0B30069A17E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				356E15181D8CF42100CDB696 /* Model */,
+				356E15131D8CED4B00CDB696 /* Network */,
 				356E3CA81D362BF600F8752A /* Main.storyboard */,
 				35FE5D901D76F0CD0069A17E /* Index */,
 				35FE5D8F1D76F0C90069A17E /* Mine */,
@@ -185,13 +221,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 356E3CB31D362BF600F8752A /* Build configuration list for PBXNativeTarget "ExpressMaster" */;
 			buildPhases = (
-				8366804BF1C40AE0C6D3AD73 /* 📦 Check Pods Manifest.lock */,
+				8366804BF1C40AE0C6D3AD73 /* [CP] Check Pods Manifest.lock */,
 				35FE5D9E1D76F1B90069A17E /* R.swift */,
 				356E3C9D1D362BF600F8752A /* Sources */,
 				356E3C9E1D362BF600F8752A /* Frameworks */,
 				356E3C9F1D362BF600F8752A /* Resources */,
-				35AEB04CEE89BBB58202B4FE /* 📦 Embed Pods Frameworks */,
-				F5B6BBE543E8A025D227B533 /* 📦 Copy Pods Resources */,
+				35AEB04CEE89BBB58202B4FE /* [CP] Embed Pods Frameworks */,
+				F5B6BBE543E8A025D227B533 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,14 +288,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		35AEB04CEE89BBB58202B4FE /* 📦 Embed Pods Frameworks */ = {
+		35AEB04CEE89BBB58202B4FE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,14 +317,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
 		};
-		8366804BF1C40AE0C6D3AD73 /* 📦 Check Pods Manifest.lock */ = {
+		8366804BF1C40AE0C6D3AD73 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +332,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F5B6BBE543E8A025D227B533 /* 📦 Copy Pods Resources */ = {
+		F5B6BBE543E8A025D227B533 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,10 +354,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356E15171D8CF23100CDB696 /* ServiceProxy.swift in Sources */,
 				35FE5D8B1D76F09D0069A17E /* MainTabBarViewController.swift in Sources */,
 				356E3CA71D362BF600F8752A /* ViewController.swift in Sources */,
 				356E3CA51D362BF600F8752A /* AppDelegate.swift in Sources */,
 				35FE5D9A1D76F1370069A17E /* IndexViewController.swift in Sources */,
+				356E151A1D8CF45E00CDB696 /* User.swift in Sources */,
+				356E151D1D8CF75400CDB696 /* UserAPIBase.swift in Sources */,
+				356E15151D8CEDAC00CDB696 /* HttpClient.swift in Sources */,
 				35FE5D9C1D76F15B0069A17E /* MineViewController.swift in Sources */,
 				35FE5DA01D76F25C0069A17E /* R.generated.swift in Sources */,
 			);
