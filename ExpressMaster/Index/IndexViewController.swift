@@ -12,10 +12,10 @@ class IndexViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        User.login(userName: "wz", password: "123456", successHandle: {
+        User.sharedUser.login(userName: "wz", password: "123456", successHandle: {
             
         }) { (reason) in
-            
+            print(reason)
         }
         // Do any additional setup after loading the view.
     }

@@ -22,15 +22,42 @@ class ServiceProxy{
     }
     
     
+    fileprivate static func isError(dic:NSDictionary)->Bool{
+        return (dic["result"] as! NSDictionary)["message"] as! String != "OK"
+    }
+    
+    
+    
+    /*
+     {
+     "result": {
+     "userID": "57cedcc17db2a20068110150",
+     "sessionToken": "vhoz3h7ygkd8p3284ex9bog25",
+     "userEmail": "1234@qq.com",
+     "userSex": true,
+     "userNickname": "GGbone",
+     "userStudentID": "123456789",
+     "userState": true,
+     "phone": "18306214367",
+     "adress": "china",
+     "personalSign": "我是国服第一皎月！",
+     "point": 15,
+     "mobilePhoneVerified": false,
+     "emailVerified": false,
+     "message": "OK"
+     }
+     }
+     */
     internal static func userLogin(
         userName:String,
         password:String,
-        complete:@escaping (_ PlayerInfo: UserAPIBase?, _ error: Error?) -> Void){
+        complete:@escaping (_ PlayerInfo: UserLoginInfo?, _ error: Error?) -> Void){
         HttpClient.invokePost(url: getLoginURL(), parameters: ["username":userName,"password":password]) { (response, error) in
             do{
                 if let data = response{
                     let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
-                    complete(UserAPIBase(fromDictionary: json),error)
+                    if isError(dic: json) { complete(nil, error)}
+                    else {complete(UserAPIBase(fromDictionary: json).result,error)}
                 }
             }catch{
                 complete(nil, error)

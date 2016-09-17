@@ -15,11 +15,31 @@ class User {
     var userID = ""
     var userName = ""
     var sessionToken = ""
+    var userEmail = ""
+    var userSex = true
+    var userNickname = ""
+    var userStudentID = ""
+    var userState = true
+    var phone = ""
+    var adress = ""
+    var personalSign = ""
+    var point = ""
+    var mobilePhoneVerified = false
+    var emailVerified = false
+
     
     
-    class func login(userName:String,password:String,successHandle:()->Void,failHandle:(_ reaon:String?)->Void){
-        ServiceProxy.userLogin(userName: userName, password: password) { (User, error) in
-            
+    
+    func login(userName:String,password:String,successHandle:@escaping ()->Void,failHandle:@escaping (_ reaon:String?)->Void){
+        ServiceProxy.userLogin(userName: userName, password: password) { (user, error) in
+            if user != nil{
+                self.userName = user?.userNickname ?? ""
+                self.userID = user!.userID
+                self.sessionToken = user!.sessionToken
+                successHandle()
+            }else{
+                failHandle(error.debugDescription)
+            }
         }
     }
 }
