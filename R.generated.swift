@@ -9,17 +9,17 @@ import UIKit
 struct R {
   /// This `R.color` struct is generated, and contains static references to 0 color palettes.
   struct color {
-    private init() {}
+    fileprivate init() {}
   }
   
   /// This `R.file` struct is generated, and contains static references to 0 files.
   struct file {
-    private init() {}
+    fileprivate init() {}
   }
   
   /// This `R.font` struct is generated, and contains static references to 0 fonts.
   struct font {
-    private init() {}
+    fileprivate init() {}
   }
   
   /// This `R.image` struct is generated, and contains static references to 4 images.
@@ -34,41 +34,41 @@ struct R {
     static let user_normal = ImageResource(bundle: _R.hostingBundle, name: "User_normal")
     
     /// `UIImage(named: "Today_highlighted", bundle: ..., traitCollection: ...)`
-    static func today_highlighted(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
-      return UIImage(resource: R.image.today_highlighted, compatibleWithTraitCollection: traitCollection)
+    static func today_highlighted(compatibleWith traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.today_highlighted, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "Today_normal", bundle: ..., traitCollection: ...)`
-    static func today_normal(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
-      return UIImage(resource: R.image.today_normal, compatibleWithTraitCollection: traitCollection)
+    static func today_normal(compatibleWith traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.today_normal, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "User_highlighted", bundle: ..., traitCollection: ...)`
-    static func user_highlighted(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
-      return UIImage(resource: R.image.user_highlighted, compatibleWithTraitCollection: traitCollection)
+    static func user_highlighted(compatibleWith traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.user_highlighted, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "User_normal", bundle: ..., traitCollection: ...)`
-    static func user_normal(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
-      return UIImage(resource: R.image.user_normal, compatibleWithTraitCollection: traitCollection)
+    static func user_normal(compatibleWith traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.user_normal, compatibleWith: traitCollection)
     }
     
-    private init() {}
+    fileprivate init() {}
   }
   
   /// This `R.nib` struct is generated, and contains static references to 0 nibs.
   struct nib {
-    private init() {}
+    fileprivate init() {}
   }
   
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
   struct reuseIdentifier {
-    private init() {}
+    fileprivate init() {}
   }
   
   /// This `R.segue` struct is generated, and contains static references to 0 view controllers.
   struct segue {
-    private init() {}
+    fileprivate init() {}
   }
   
   /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
@@ -83,42 +83,42 @@ struct R {
     static let mine = _R.storyboard.mine()
     
     /// `UIStoryboard(name: "Index", bundle: ...)`
-    static func index(_: Void) -> UIStoryboard {
+    static func index(_: Void = ()) -> UIStoryboard {
       return UIStoryboard(resource: R.storyboard.index)
     }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
-    static func launchScreen(_: Void) -> UIStoryboard {
+    static func launchScreen(_: Void = ()) -> UIStoryboard {
       return UIStoryboard(resource: R.storyboard.launchScreen)
     }
     
     /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void) -> UIStoryboard {
+    static func main(_: Void = ()) -> UIStoryboard {
       return UIStoryboard(resource: R.storyboard.main)
     }
     
     /// `UIStoryboard(name: "Mine", bundle: ...)`
-    static func mine(_: Void) -> UIStoryboard {
+    static func mine(_: Void = ()) -> UIStoryboard {
       return UIStoryboard(resource: R.storyboard.mine)
     }
     
-    private init() {}
+    fileprivate init() {}
   }
   
   /// This `R.string` struct is generated, and contains static references to 0 localization tables.
   struct string {
-    private init() {}
+    fileprivate init() {}
   }
   
-  private init() {}
+  fileprivate init() {}
 }
 
 struct _R {
-  static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(NSLocale.init) ?? NSLocale.currentLocale()
-  static let hostingBundle = NSBundle(identifier: "com.BubbleTeam.ExpressMaster") ?? NSBundle.mainBundle()
+  static let applicationLocale = hostingBundle.preferredLocalizations.first.flatMap(Locale.init) ?? Locale.current
+  static let hostingBundle = Bundle(identifier: "com.BubbleTeam.ExpressMaster") ?? Bundle.main
   
   struct nib {
-    private init() {}
+    fileprivate init() {}
   }
   
   struct storyboard {
@@ -128,7 +128,7 @@ struct _R {
       let bundle = _R.hostingBundle
       let name = "Index"
       
-      private init() {}
+      fileprivate init() {}
     }
     
     struct launchScreen: StoryboardResourceWithInitialControllerType {
@@ -137,7 +137,7 @@ struct _R {
       let bundle = _R.hostingBundle
       let name = "LaunchScreen"
       
-      private init() {}
+      fileprivate init() {}
     }
     
     struct main: StoryboardResourceWithInitialControllerType {
@@ -146,7 +146,7 @@ struct _R {
       let bundle = _R.hostingBundle
       let name = "Main"
       
-      private init() {}
+      fileprivate init() {}
     }
     
     struct mine: StoryboardResourceWithInitialControllerType {
@@ -155,11 +155,11 @@ struct _R {
       let bundle = _R.hostingBundle
       let name = "Mine"
       
-      private init() {}
+      fileprivate init() {}
     }
     
-    private init() {}
+    fileprivate init() {}
   }
   
-  private init() {}
+  fileprivate init() {}
 }
