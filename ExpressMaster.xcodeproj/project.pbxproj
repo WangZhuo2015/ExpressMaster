@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3525AB421D8E8590000BDF4B /* SimpleSuccessAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3525AB411D8E8590000BDF4B /* SimpleSuccessAPIBase.swift */; };
+		3525AB441D8E90EC000BDF4B /* SendOrderAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3525AB431D8E90EC000BDF4B /* SendOrderAPIBase.swift */; };
 		356E15151D8CEDAC00CDB696 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E15141D8CEDAC00CDB696 /* HttpClient.swift */; };
 		356E15171D8CF23100CDB696 /* ServiceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E15161D8CF23100CDB696 /* ServiceProxy.swift */; };
 		356E151A1D8CF45E00CDB696 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E15191D8CF45E00CDB696 /* User.swift */; };
 		356E151D1D8CF75400CDB696 /* UserAPIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E151C1D8CF75400CDB696 /* UserAPIBase.swift */; };
-		356E151F1D8D23B600CDB696 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E151E1D8D23B600CDB696 /* Result.swift */; };
+		356E151F1D8D23B600CDB696 /* UserLoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E151E1D8D23B600CDB696 /* UserLoginInfo.swift */; };
 		356E3CA51D362BF600F8752A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E3CA41D362BF600F8752A /* AppDelegate.swift */; };
 		356E3CA71D362BF600F8752A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E3CA61D362BF600F8752A /* ViewController.swift */; };
 		356E3CAA1D362BF600F8752A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356E3CA81D362BF600F8752A /* Main.storyboard */; };
@@ -28,11 +30,13 @@
 
 /* Begin PBXFileReference section */
 		35026EF68563FC94978D0015 /* Pods-ExpressMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpressMaster.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpressMaster/Pods-ExpressMaster.release.xcconfig"; sourceTree = "<group>"; };
+		3525AB411D8E8590000BDF4B /* SimpleSuccessAPIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleSuccessAPIBase.swift; path = Model/SimpleSuccessAPIBase.swift; sourceTree = "<group>"; };
+		3525AB431D8E90EC000BDF4B /* SendOrderAPIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SendOrderAPIBase.swift; path = Model/SendOrderAPIBase.swift; sourceTree = "<group>"; };
 		356E15141D8CEDAC00CDB696 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpClient.swift; path = Network/HttpClient.swift; sourceTree = "<group>"; };
 		356E15161D8CF23100CDB696 /* ServiceProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceProxy.swift; path = Network/ServiceProxy.swift; sourceTree = "<group>"; };
 		356E15191D8CF45E00CDB696 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		356E151C1D8CF75400CDB696 /* UserAPIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAPIBase.swift; path = Model/UserAPIBase.swift; sourceTree = "<group>"; };
-		356E151E1D8D23B600CDB696 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Model/Result.swift; sourceTree = "<group>"; };
+		356E151E1D8D23B600CDB696 /* UserLoginInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLoginInfo.swift; path = Model/UserLoginInfo.swift; sourceTree = "<group>"; };
 		356E3CA11D362BF600F8752A /* ExpressMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpressMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		356E3CA41D362BF600F8752A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		356E3CA61D362BF600F8752A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,8 +87,10 @@
 		356E151B1D8CF74200CDB696 /* APIBase */ = {
 			isa = PBXGroup;
 			children = (
-				356E151E1D8D23B600CDB696 /* Result.swift */,
+				356E151E1D8D23B600CDB696 /* UserLoginInfo.swift */,
 				356E151C1D8CF75400CDB696 /* UserAPIBase.swift */,
+				3525AB411D8E8590000BDF4B /* SimpleSuccessAPIBase.swift */,
+				3525AB431D8E90EC000BDF4B /* SendOrderAPIBase.swift */,
 			);
 			name = APIBase;
 			sourceTree = "<group>";
@@ -248,7 +254,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = BubbleTeam;
 				TargetAttributes = {
 					356E3CA01D362BF600F8752A = {
@@ -359,6 +365,7 @@
 			files = (
 				356E15171D8CF23100CDB696 /* ServiceProxy.swift in Sources */,
 				35FE5D8B1D76F09D0069A17E /* MainTabBarViewController.swift in Sources */,
+				3525AB441D8E90EC000BDF4B /* SendOrderAPIBase.swift in Sources */,
 				356E3CA71D362BF600F8752A /* ViewController.swift in Sources */,
 				356E3CA51D362BF600F8752A /* AppDelegate.swift in Sources */,
 				35FE5D9A1D76F1370069A17E /* IndexViewController.swift in Sources */,
@@ -366,8 +373,9 @@
 				356E151D1D8CF75400CDB696 /* UserAPIBase.swift in Sources */,
 				356E15151D8CEDAC00CDB696 /* HttpClient.swift in Sources */,
 				35FE5D9C1D76F15B0069A17E /* MineViewController.swift in Sources */,
+				3525AB421D8E8590000BDF4B /* SimpleSuccessAPIBase.swift in Sources */,
 				35FE5DA01D76F25C0069A17E /* R.generated.swift in Sources */,
-				356E151F1D8D23B600CDB696 /* Result.swift in Sources */,
+				356E151F1D8D23B600CDB696 /* UserLoginInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,20 @@
 //
 
 import Foundation
+
+enum RequestResult{
+    case success
+    case fail(String)
+}
+
+
 class ServiceProxy{
+    
+    //MARK: -Tool Function
+    fileprivate static func isError(dic:NSDictionary)->Bool{
+        return (dic["result"] as! NSDictionary)["message"] as! String != "OK"
+    }
+    
     // MARK: -URL
     fileprivate static var ServiceEndpointBase : String {
         return "http://expressman.leanapp.cn/1.1/functions/"
@@ -21,12 +34,17 @@ class ServiceProxy{
         return ServiceEndpointBase + "register"
     }
     
-    
-    fileprivate static func isError(dic:NSDictionary)->Bool{
-        return (dic["result"] as! NSDictionary)["message"] as! String != "OK"
+    fileprivate static func getSendOrderURL() -> String {
+        return ServiceEndpointBase + "sendOrder"
     }
     
+    fileprivate static func getAcceptOrderURL() -> String {
+        return ServiceEndpointBase + "acceptOrder"
+    }
     
+//    fileprivate static func getAcceptOrderURL() -> String {
+//        return ServiceEndpointBase + "acceptOrder"
+//    }
     
     /*
      {
@@ -51,7 +69,7 @@ class ServiceProxy{
     internal static func userLogin(
         userName:String,
         password:String,
-        complete:@escaping (_ PlayerInfo: UserLoginInfo?, _ error: Error?) -> Void){
+        complete:@escaping (_ userInfo: UserLoginInfo?, _ error: Error?) -> Void){
         HttpClient.invokePost(url: getLoginURL(), parameters: ["username":userName,"password":password]) { (response, error) in
             do{
                 if let data = response{
@@ -66,12 +84,86 @@ class ServiceProxy{
         }
     }
     
-//    internal static func userSignUp(
-//        playerName:String,
-//        complete:(_ PlayerInfo: RoleAPIBase?, _ error: NSError?) -> Void){
-//        HttpClient.invokeGet(url: getSignUpURL(), parameters: ["name":playerName]) { (response, error) in
-//            let json = JSON(data: response!)
-//            complete(PlayerInfo: RoleAPIBase(fromJson:json), error: error)
-//        }
-//    }
+    
+    
+    
+    internal static func userSignUp(
+        userName:String,
+        password:String,
+        phone:String,
+        complete:@escaping (_ isSuccess:RequestResult, _ error: Error?) -> Void){
+        HttpClient.invokePost(url: getSignUpURL(), parameters: ["username":userName,"password":password,"phone":phone]) { (response, error) in
+            do{
+                if let data = response{
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
+                    if json["error"] == nil{
+                        complete(.success,nil)
+                    }else{
+                        complete(.fail(json["error"] as! String),error)
+                    }
+                    
+                }
+            }catch{
+                complete(.fail("错误"),error)
+            }
+            print(response)
+        }
+    }
+    
+    
+    internal static func sendOrder(
+        sessionToken:String,
+        waybill:String,
+        expressCompany:String,
+        orderScore:String,
+        orderNote:String,
+        //locationID:String,
+        complete:@escaping (_ orderInfo: SendOrderAPIBase?,_ isSuccess:RequestResult, _ error: Error?) -> Void){
+        HttpClient.invokePost(url: getSendOrderURL(), parameters: ["sessionToken":sessionToken,
+                                                                "waybill":waybill,
+                                                                "expressCompany":expressCompany,
+                                                                "orderScore":orderScore,
+                                                                "orderNote":orderNote]) { (response, error) in
+            do{
+                if let data = response{
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
+                    if json["error"] == nil{
+                        complete(SendOrderAPIBase(fromDictionary: json["result"] as! NSDictionary),.success,nil)
+                    }else{
+                        complete(nil,.fail(json["error"] as! String),error)
+                    }
+                    
+                }
+            }catch{
+                complete(nil,.fail("错误"),error)
+            }
+            print(response)
+        }
+    }
+
+    
+    
+    
+    internal static func acceptOrder(
+        sessionToken:String,
+        id:String,
+        complete:@escaping (_ isSuccess:RequestResult, _ error: Error?) -> Void){
+        HttpClient.invokePost(url: getAcceptOrderURL(), parameters: ["sessionToken":sessionToken,"id":id])
+        { (response, error) in
+            do{
+                if let data = response{
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
+                    if json["error"] == nil{
+                        complete(.success,nil)
+                    }else{
+                        complete(.fail(json["error"] as! String),error)
+                    }
+                    
+                }
+            }catch{
+                complete(.fail("错误"),error)
+            }
+            print(response)
+        }
+    }
 }
